@@ -14,7 +14,7 @@ const Create = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        // Check if there are already 5 entries
+        
         if (data.length >= 5) {
             return window.alert("Maximum of 5 entries allowed.");
         }
@@ -28,7 +28,7 @@ const Create = () => {
             hour: '2-digit',
             minute: '2-digit',
             second: '2-digit',
-            hour12: false // This ensures 24-hour format
+            hour12: false 
         });
 
         dispatch(addData({
@@ -38,7 +38,7 @@ const Create = () => {
             timeStamp: currentTime,
         }));
 
-        // Reset form fields
+        
         setTitle('');
         setUrl('');
     };
